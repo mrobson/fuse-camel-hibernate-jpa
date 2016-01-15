@@ -42,6 +42,11 @@
 		<property name="user" value="${datasource.username}"/>
 		<property name="password" value="${datasource.password}"/>
 	</bean>
+	<bean id="dataSourceMEM" class="org.h2.jdbcx.JdbcDataSource">
+		<property name="URL" value="jdbc:h2:tcp://localhost/~/dataBase;DB_CLOSE_DELAY=-1;MVCC=TRUE"/>
+		<property name="user" value="sa"/>
+		<property name="password" value=""/>
+	</bean>
 	<service interface="javax.sql.XADataSource" ref="dataSourceXA">
 		<service-properties>
 			<entry key="osgi.jndi.service.name" value="jdbc/Hibernate_XADS"/>
@@ -68,6 +73,15 @@
 			<entry key="name" value="NonXA_DS"/>
 			<entry key="aries.xa.aware" value="false" />
 			<entry key="aries.xa.name" value="NonXA_DS" />
+		</service-properties>
+	</service>
+	<service interface="javax.sql.DataSource" ref="dataSourceMEM">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="jdbc/h2memory"/>
+			<entry key="datasource.name" value="NonXA_h2memory"/>
+			<entry key="name" value="NonXA_h2memory"/>
+			<entry key="aries.xa.aware" value="false" />
+			<entry key="aries.xa.name" value="NonXA_h2memory" />
 		</service-properties>
 	</service>
 </blueprint>
