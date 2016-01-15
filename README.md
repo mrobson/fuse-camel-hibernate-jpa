@@ -75,7 +75,7 @@ Usage
 
 Copy the example person XML from the project to the processing directory where Camel will pick it up, unmarshall and persist the person to the DB
 
-	cp camel-hibernate-route/src/test/resources/person.xml $GUSE_HOME/data/camel/
+	cp camel-hibernate-route/src/test/resources/person.xml $FUSE_HOME/data/camel/
 
 Create a new file (with a new name) and copy it in, Camel will pick up any file placed into that directory
 
