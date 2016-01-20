@@ -31,7 +31,7 @@
 		</cm:default-properties>
 	</cm:property-placeholder>
 
-	<bean id="dataSourceXA" class="oracle.jdbc.xa.client.OracleXADataSource">
+	<!--bean id="dataSourceXA" class="oracle.jdbc.xa.client.OracleXADataSource">
 		<property name="URL" value="${datasource.url}"/>
 		<property name="user" value="${datasource.username}"/>
 		<property name="password" value="${datasource.password}"/>
@@ -41,13 +41,13 @@
 		<property name="URL" value="${datasource.url}"/>
 		<property name="user" value="${datasource.username}"/>
 		<property name="password" value="${datasource.password}"/>
-	</bean>
+	</bean-->
 	<bean id="dataSourceMEM" class="org.h2.jdbcx.JdbcDataSource">
-		<property name="URL" value="jdbc:h2:tcp://localhost/~/dataBase;DB_CLOSE_DELAY=-1;MVCC=TRUE"/>
+		<property name="URL" value="jdbc:h2:mem:dataBase;DB_CLOSE_DELAY=-1"/>
 		<property name="user" value="sa"/>
 		<property name="password" value=""/>
 	</bean>
-	<service interface="javax.sql.XADataSource" ref="dataSourceXA">
+	<!--service interface="javax.sql.XADataSource" ref="dataSourceXA">
 		<service-properties>
 			<entry key="osgi.jndi.service.name" value="jdbc/Hibernate_XADS"/>
 			<entry key="datasource.name" value="Hibernate_XADS"/>
@@ -74,7 +74,7 @@
 			<entry key="aries.xa.aware" value="false" />
 			<entry key="aries.xa.name" value="NonXA_DS" />
 		</service-properties>
-	</service>
+	</service-->
 	<service interface="javax.sql.DataSource" ref="dataSourceMEM">
 		<service-properties>
 			<entry key="osgi.jndi.service.name" value="jdbc/h2memory"/>

@@ -108,7 +108,6 @@
                                                         javassist.util.proxy,
                                                         org.hibernate.ejb;version="[4.2,5)"
                                                         org.hibernate.proxy;version="[4.2,4.3)",
-                                                        oracle.jdbc.driver,
 	 						org.mrobson.example.camelhibernatejpa.datamodel,
 							*
 						</Import-Package>

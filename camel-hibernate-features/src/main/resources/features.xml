@@ -26,7 +26,7 @@
 		<feature>cxf-jaxrs</feature>
 		<feature>hibernate</feature>
 		<bundle start-level="60">mvn:com.h2database/h2/1.3.168</bundle>
-		<bundle start-level="60">wrap:mvn:com.oracle/ojdbc6/12.1.0.1</bundle>
+		<!--bundle start-level="60">wrap:mvn:com.oracle/ojdbc6/12.1.0.1</bundle-->
 		<bundle start-level="90">mvn:org.mrobson.example.camel-hibernate-jpa/camel-hibernate-xa-datasource/${project.version}</bundle>
 		<bundle start-level="95">mvn:org.mrobson.example.camel-hibernate-jpa/camel-hibernate-datamodel/${project.version}</bundle>
 		<bundle start-level="100">mvn:org.mrobson.example.camel-hibernate-jpa/camel-hibernate-route/${project.version}</bundle>

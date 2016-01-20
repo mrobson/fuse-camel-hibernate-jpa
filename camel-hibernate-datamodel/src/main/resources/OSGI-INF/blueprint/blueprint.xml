@@ -29,11 +29,11 @@
            xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
              http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
 	
-	<reference id="dataSource"
+	<!--reference id="dataSource"
                 interface="javax.sql.DataSource"
                 filter="(datasource.name=NonXA_DS)" availability="mandatory"/>
                 
 	<reference id="dataSourceXA"
                 interface="javax.sql.XADataSource"
-                filter="(datasource.name=Hibernate_XADS)" availability="mandatory"/>
+                filter="(datasource.name=Hibernate_XADS)" availability="mandatory"/-->
 </blueprint>

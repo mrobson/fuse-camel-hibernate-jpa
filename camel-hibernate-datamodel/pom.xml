@@ -84,7 +84,7 @@
 							javassist.util.proxy,
 							org.hibernate.ejb;version="[4.2,5)"
 							org.hibernate.proxy;version="[4.2,4.3)",
-							oracle.jdbc.driver,
+							<!--oracle.jdbc.driver,-->
 							*
 						</Import-Package>
  						<Export-Package>
